@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="310dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/exclamation_mark"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:text="@string/submission_error"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:textStyle="normal"
+        android:text="@string/we_were_unable_to_submit_your_feedback_nplease_try_again"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#435473"
+        android:layout_marginTop="10dp"
+        android:text="@string/retry"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

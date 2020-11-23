@@ -2,11 +2,13 @@ package com.arshad.webviewdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
+import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -22,11 +24,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String webUrl = "https://www.google.com/";
-        String logoutUrl = "https://www.facebook.com/";
+        //String webUrl = "https://www.google.com/";
+        String webUrl = "https://admin.onedirect.in/feedback/public/form/?hash=ODI4M18xNjA1ODcwMjkxODAyXzEyYTZkXzVfMF85OTg5XzM2MDFfMzIwMQ%3D%3D";
+        String logoutUrl = "";
 
         initView(webUrl, logoutUrl);
 
+    }
+
+    private void showSuccessMessage() {
+        Dialog dialog = new Dialog(MainActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_survey_success);
+        dialog.show();
+    }
+
+    private void showFailedMessage() {
+        Dialog dialog = new Dialog(MainActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_survey_failed);
+        dialog.show();
     }
 
     @Override
@@ -65,14 +82,14 @@ public class MainActivity extends AppCompatActivity {
             public void onPageCommitVisible(WebView view, String url) {
                 super.onPageCommitVisible(view, url);
 
-                if (url.contains(logoutUrl)) {
+                /*if (url.contains(logoutUrl)) {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             Toast.makeText(MainActivity.this, "Survey completed successfully", Toast.LENGTH_SHORT).show();
                         }
                     }, 4000);
-                }
+                }*/
 
             }
 

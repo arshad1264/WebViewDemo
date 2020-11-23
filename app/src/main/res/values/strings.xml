@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">WebViewDemo</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="your_feedback_has_been_submitted_successfully">Your feedback has been submitted successfully.</string>
+    <string name="submission_error">Submission Error!</string>
+    <string name="we_were_unable_to_submit_your_feedback_nplease_try_again">We were unable to submit your feedback.\nPlease try Again.</string>
+    <string name="retry">Retry</string>
 </resources>
