@@ -33,6 +33,7 @@
         android:text="@string/we_were_unable_to_submit_your_feedback_nplease_try_again"/>
 
     <Button
+        android:id="@+id/buttonRetry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#435473"
